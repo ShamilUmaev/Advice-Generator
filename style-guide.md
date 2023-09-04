@@ -12,7 +12,7 @@ The designs were created to the following widths:
 ### Primary
 
 - Light Cyan: hsl(193, 38%, 86%)
-- Neon Green: hsl(150, 100%, 66%)
+- Neon Green: hsl(150, 100%, 66%) 
 
 ### Neutral
 

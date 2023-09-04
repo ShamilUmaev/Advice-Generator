@@ -11,6 +11,7 @@ html {
 }
 
 body {
+    min-height: 100vh;
     background-color: hsl(218, 23%, 16%);
     font-family: 'Manrope', sans-serif;
 }
@@ -19,6 +20,7 @@ body {
     min-width: 375px;
     max-width: 1440px;
     position: relative;
+    padding-top: 20rem;
 }
 
 .advice-container {
@@ -27,11 +29,12 @@ body {
     max-width: 520px;
     border-radius: 10px;
     background-color: hsl(217, 19%, 24%);
-    margin: 200px auto;
+    margin: 0 auto 10rem;
     padding: 0 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .advice-container h5 {
@@ -54,6 +57,9 @@ body {
     align-items: center;
     min-width: 100%;
     margin-top: 3rem;
+    position: absolute;
+    padding: 0 3rem;
+    bottom: 20%;
 }
 
 .line {
@@ -81,8 +87,8 @@ body {
     border: none;
     position: absolute;
     left: 50%;
-    top: 54%;
-    transform: translateX(-50%);
+    bottom: 0;
+    transform: translate(-50%, 50%);
     background-color: hsl(150, 100%, 66%);
 }
 
@@ -94,3 +100,13 @@ body {
 .attribution a { 
     color: hsl(228, 45%, 44%); 
 }
+
+@media (orientation: landscape) {
+    .page-container {
+        padding: 3rem;
+    }
+
+    .advice-container {
+        margin-bottom: 5rem;
+    }
+  }
