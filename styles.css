@@ -18,19 +18,78 @@ body {
 .page-container {
     min-width: 375px;
     max-width: 1440px;
+    position: relative;
 }
 
 .advice-container {
-    height: 300px;
+    min-height: 320px;
     width: 95%;
-    max-width: 480px;
+    max-width: 520px;
     border-radius: 10px;
-    background-color: hsl(217, 19%, 38%);
+    background-color: hsl(217, 19%, 24%);
     margin: 200px auto;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.advice-container h5 {
+    color: hsl(150, 100%, 66%);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin: 4rem 0 2rem;
+    letter-spacing: .3rem;
+}
+
+.advice-container p {
+    color: hsl(193, 38%, 86%);
+    font-size: 2.6rem;
+    text-align: center;
+}
+
+.divider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100%;
+    margin-top: 3rem;
+}
+
+.line {
+    height: 1px;
+    width: 43%;
+    background-color: hsl(217, 19%, 38%);
+}
+
+.quote-marks-ctr {
+    display: flex;
+    justify-content: space-between;
+    width: 19px;
+}
+
+.quote-mark {
+    height: 16px;
+    width: 6px;
+    border-radius: 5px;
+    background-color: hsl(193, 38%, 86%);
+}
+
+.btn {
+    padding: 1.8rem 2rem;
+    border-radius: 100%;
+    border: none;
+    position: absolute;
+    left: 50%;
+    top: 54%;
+    transform: translateX(-50%);
+    background-color: hsl(150, 100%, 66%);
 }
 
 .attribution { 
     font-size: 11px; text-align: center; 
+    color: hsl(193, 38%, 86%);
+    font-size: 1.4rem;
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
