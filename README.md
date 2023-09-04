@@ -14,8 +14,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/ShamilUmaev/Advice-Generator)
-- Live Site URL: [Add live site URL here](https://shamilumaev.github.io/Advice-Generator/)
+- Solution URL: (https://github.com/ShamilUmaev/Advice-Generator)
+- Live Site URL: (https://shamilumaev.github.io/Advice-Generator/)
 
 ### Built with
 
