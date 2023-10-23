@@ -22,8 +22,9 @@ Users should be able to:
 - HTML5 markup
 - CSS
 - Flexbox
-- JavaScript
 - Mobile-first workflow
+- JavaScript
+- Advice Slip API
 
 ## Author
 
