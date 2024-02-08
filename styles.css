@@ -11,29 +11,33 @@ html {
 }
 
 body {
-    min-height: 100vh;
+    min-height: 100dvh;
     background-color: hsl(218, 23%, 16%);
     font-family: 'Manrope', sans-serif;
 }
 
 .page-container {
     min-width: 375px;
-    max-width: 1440px;
+    max-width: 1920px;
+    min-height: 100dvh;
     margin: 0 auto;
     position: relative;
-    padding-top: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .advice-container {
     width: 95%;
-    max-width: 520px;
     border-radius: 10px;
     background-color: hsl(217, 19%, 24%);
-    margin: 0 auto 10rem;
-    padding: 0 3rem;
+    padding: 5rem 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    row-gap: 4rem;
     position: relative;
 }
 
@@ -41,7 +45,6 @@ body {
     color: hsl(150, 100%, 66%);
     font-size: 1.2rem;
     text-transform: uppercase;
-    margin: 4rem 0 2rem;
     letter-spacing: .3rem;
 }
 
@@ -49,7 +52,6 @@ body {
     color: hsl(193, 38%, 86%);
     font-size: 2.6rem;
     text-align: center;
-    margin-bottom: 13rem;
 }
 
 .divider {
@@ -57,10 +59,7 @@ body {
     justify-content: space-between;
     align-items: center;
     min-width: 100%;
-    margin-top: 3rem;
-    position: absolute;
     padding: 0 3rem;
-    bottom: 20%;
 }
 
 .line {
@@ -102,17 +101,87 @@ body {
     color: hsl(193, 38%, 86%);
     font-size: 1.4rem;
     padding: 0 1rem;
+    position: absolute;
+    bottom: 8%;
 }
+
 .attribution a { 
     color: hsl(228, 45%, 44%); 
 }
 
-@media screen and (max-width: 926px) and (orientation: landscape) {
-    .page-container {
-        padding: 3rem;
+/* Loader */
+.loader {
+    color: #ffffff;
+    font-size: 30px;
+    text-indent: -9999em;
+    overflow: hidden;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: relative;
+    transform: translateZ(0);
+    animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
+  }
+  
+@keyframes mltShdSpin {
+    0% {
+        box-shadow: 0 -0.83em 0 -0.4em,
+        0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+        0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
     }
+    5%,
+    95% {
+        box-shadow: 0 -0.83em 0 -0.4em, 
+        0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 
+        0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    10%,
+    59% {
+        box-shadow: 0 -0.83em 0 -0.4em, 
+        -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, 
+        -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+    }
+    20% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
+        -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, 
+        -0.749em -0.34em 0 -0.477em;
+    }
+    38% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
+        -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, 
+        -0.82em -0.09em 0 -0.477em;
+    }
+    100% {
+        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 
+        0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+}
+  
+@keyframes round {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+}  
 
-    .advice-container {
-        margin-bottom: 5rem;
+/* Hide loader */
+.hide-loader {
+    display: none;
+}
+
+/* Show loader */
+.show-loader {
+    display: block;
+}
+
+/* Landscape */
+@media screen and (max-width: 926px) and (orientation: landscape) {
+    .attribution {
+        display: none;
     }
   }
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 768px) {
+    .advice-container {
+        width: 80%;
+    }
+}
